@@ -11,5 +11,11 @@
     "url": "Friends-Finder"
   },
   "author": "Karina Rivas",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body": "^5.1.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "parser": "^0.1.4"
+  }
 }

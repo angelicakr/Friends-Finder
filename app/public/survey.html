@@ -4,10 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Friends Finder Survey</title>
-    <!-- Latest compiled and minified CSS & JS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!-- Font -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 
@@ -25,31 +28,221 @@
                 <h1 style='color:purple'> Find me a match </h1>
                 <hr>
                 <h2 style='color:plum'> About you </h2>
-                <form method="POST" role="form"></form>>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputName">Name (Required):</label>
-                            <input type="name" class="form-control" id="inputName" placeholder="Name">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputLast">Lastname (Required): </label>
-                            <input type="lastName" class="form-control" id="inputLast" placeholder="Lastname">
-                        </div>
+                <form id="form" >
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputName">Name (Required):</label>
+                        <input type="name" class="form-control" id="inputName" placeholder="Name">
                     </div>
-                    <div class="form-group">
-                        <label for="inputImage">Link to Photo Image (Required): </label>
-                        <input type="Photo" class="form-control" id="inputImage" placeholder="Your Image Here">
+                    <div class="form-group col-md-6">
+                        <label for="inputLast">Lastname (Required): </label>
+                        <input type="lastName" class="form-control" id="inputLast" placeholder="Lastname">
                     </div>
-                    <div class='question-box'></div>
-                    <button class='btn btn-info' id='submit'>Submit</button>
-
+                </div>
+                <div class="form-group">
+                    <label for="inputImage">Link to Photo Image (Required): </label>
+                    <input type="Photo" class="form-control" id="inputImage" placeholder="Your Image Here">
+                </div>
+                <div class='question-box'></div>
+                
             </div>
         </div>
+        <div class="container" id="mainbody2">
+            <h3 id="subhead">On a scale of 1-5, where 5 is strongly agree and 1 is strongly disagree, answer the
+                following questions.</h3>
 
-    </div>
-    <hr />
-    <a href="/api/tables">API Friends List</a> | <a href="/api/waitlist">Github Repo</a>
-    </div>
+            <div class="form-group col-md-5 ml-auto">
+                <h5>Question 1</h5>
+                <label for="q1">What's Your Favorite Color?</label>
+                <select id="q1" class="form-control" required>
+                    <option value="" selected>Choose...</option>
+                    <option value="1">Pink</option>
+                    <option value="2">Teal</option>
+                    <option value="3">Purple</option>
+                    <option value="4">Blue</option>
+                    <option value="5">Orange</option>
+                </select>
+            </div>
+            <div class="form-group col-md-5 ml-auto">
+                <h5>Question 2</h5>
+                <label for="q2">What Do You Do at Parties?</label>
+                <select id="q2" class="form-control" required>
+                    <option value="" selected>Choose...</option>
+                    <option value="1">Bring food for everyone</option>
+                    <option value="2">Play DJ, I bring the music</option>
+                    <option value="3">I make friends with the house pets</option>
+                    <option value="4">I try to start a conversation with someone</option>
+                    <option value="5">I take selfies and make sure everyone knows I'm there</option>
+                </select>
+            </div>
+            <div class="form-group col-md-5 ml-auto">
+                <h5>Question 3</h5>
+                <label for="q3">My Ideal Workspace Is...</label>
+                <select id="q3" class="form-control" required>
+                    <option value="" selected>Choose...</option>
+                    <option value="1">Wherever The Work Takes Me</option>
+                    <option value="2">An Office</option>
+                    <option value="3">Anywhere I can get Wifi</option>
+                    <option value="4">My Own Storefront</option>
+                    <option value="5">An Art Studio</option>
+                </select>
+            </div>
+            <div class="form-group col-md-5 ml-auto">
+                <h5>Question 4</h5>
+                <label for="q4">My Go-To Beverage Is...</label>
+                <select id="q4" class="form-control" required>
+                    <option value="" selected>Choose...</option>
+                    <option value="1">Beer</option>
+                    <option value="2">Wine</option>
+                    <option value="3">Coffee</option>
+                    <option value="4">Kombucha</option>
+                    <option value="5">Water</option>
+                </select>
+            </div>
+            <div class="form-group col-md-5 ml-auto">
+                <h5>Question 5</h5>
+                <label for="q5">When Do You Get The Most Done?</label>
+                <select id="q5" class="form-control" required>
+                    <option value="" selected>Choose...</option>
+                    <option value="1">Early Morning</option>
+                    <option value="2">Late at Night</option>
+                    <option value="3">Between Other Tasks</option>
+                    <option value="4">When Inspiration Hits</option>
+                    <option value="5">last minute! I'm a procastinator</option>
+                </select>
+            </div>
+            <div class="form-group col-md-5 ml-auto">
+                <h5>Question 6</h5>
+                <label for="q6">Which Words Best Describe You?</label>
+                <select id="q6" class="form-control" required>
+                    <option value="" selected>Choose...</option>
+                    <option value="1">Classic and Refined</option>
+                    <option value="2">Reliable and Easy Going</option>
+                    <option value="3">Glittering and Charming</option>
+                    <option value="4">Modern and Stylish</option>
+                    <option value="5">Carefree and Creative</option>
+                </select>
+            </div>
+            <div class="form-group col-md-5 ml-auto">
+                <h5>Question 7</h5>
+                <label for="q7">Which Would Be Your Go-To First Date?</label>
+                <select id="q7" class="form-control" required>
+                    <option value="" selected>Choose...</option>
+                    <option value="1">Dinner and a show</option>
+                    <option value="2">Music Festival</option>
+                    <option value="3">Picnic and Bike Ride in the Park</option>
+                    <option value="4">Drinks and Dancing at the club</option>
+                    <option value="5">Hot Air Balloon Ride</option>
+                </select>
+            </div>
+            <div class="form-group col-md-5 ml-auto">
+                <h5>Question 8</h5>
+                <label for="q8">What's Your Favorite Kind of Vacation?</label>
+                <select id="q8" class="form-control" required>
+                    <option value="" selected>Choose...</option>
+                    <option value="1">Beach</option>
+                    <option value="2">Cultural</option>
+                    <option value="3">Amusement Park</option>
+                    <option value="4">Road Trip</option>
+                    <option value="5">Exotic</option>
+                </select>
+            </div>
+            <div class="form-group col-md-5 ml-auto">
+                <h5>Question 9</h5>
+                <label for="q9">What is a quote that inspires you?</label>
+                <select id="q9" class="form-control" required>
+                    <option value="" selected>Choose...</option>
+                    <option value="1">Go Hard or Go Home</option>
+                    <option value="2">Collect Memories Not Things</option>
+                    <option value="3">A River Cuts Through Rock Not With Power But With Persistence</option>
+                    <option value="4">Road is Long When You're In Good Company</option>
+                    <option value="5">Life Begins at The End Of Your Comfort Zone</option>
+                </select>
+            </div>
+            <div class="form-group col-md-5 ml-auto">
+                <h5>Question 10</h5>
+                <label for="q10">My Favorite Place to Take A Daily Walk Is...</label>
+                <select id="q10" class="form-control" required>
+                    <option value="" selected>Choose...</option>
+                    <option value="1">To The Local Park For A Stroll</option>
+                    <option value="2">Through my house tidying up</option>
+                    <option value="3">To my local coffee shop to meet up with a good friend</option>
+                    <option value="4">To the library to find a new book to read</option>
+                    <option value="5">I'm lazy and don't like walking</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submit" data-toggle="modal" data-target="#modalResult">Find
+                my match</button>
+            </form>
+
+            <!-- Modal to display Friend match -->
+            <!-- Button trigger modal -->
+
+            <div class="modal fade" id="modalResult" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitle">Your New BFF!</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-4">
+                                    <img id="matchPhoto">
+                                </div>
+                                <div class="col-8">
+                                    <h3 id="matchName"></h3>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="/home"><button type="button" class="btn btn-secondary">Close</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <footer>
+                <div class="container" id="footer">
+                    <a id="api" href="/api/friends">API Friends List</a>
+                    <a id="api" href="/api/participant">API Participants</a>
+                </div>
+            </footer>
+         
+            <script type="text/javascript">
+
+                $("#form").on("submit",function(event){
+                    event.preventDefault();
+                    var info = {
+                        name: $("#inputName").val() + " " + $("#inputLast").val(),
+                        image: $("#inputImage").val(),
+                        scores:[
+                            $("#q1").val(),
+                            $("#q2").val(),
+                            $("#q3").val(),
+                            $("#q4").val(),
+                            $("#q5").val(),
+                            $("#q6").val(),
+                            $("#q7").val(),
+                            $("#q8").val(),
+                            $("#q9").val(),
+                            $("#q10").val(),
+
+                        ]
+                    }
+                    console.log(info);
+                    $.post("/api/friends", info, function(data){
+                        $("#matchPhoto").attr("src", data.photo),
+                        $("#matchName").text(data.name)
+                    })
+                })
+
+            </script>
 </body>
 
 </html>
